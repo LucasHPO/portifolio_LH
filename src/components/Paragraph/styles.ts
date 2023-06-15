@@ -3,7 +3,9 @@ import { Props } from '.'
 
 export const P = styled.p<Props>`
   color: ${(props) =>
-    props.typeParagraph === 'principal' ? '#282a35' : '#949494'};
+    props.typeParagraph === 'principal'
+      ? props.theme.corPrincipal
+      : props.theme.corSecundaria};
   font-size: ${(props) => (props.fontSize ? props.fontSize + 'px' : '14px')};
   line-height: 22px;
 `

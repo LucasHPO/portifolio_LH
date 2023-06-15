@@ -4,7 +4,11 @@ import Avatar from '../../components/Avatar'
 
 import { BTNTema, Description, SidebarContainer } from './styles'
 
-const SideBar = () => (
+type Props = {
+  trocaTema: () => void
+}
+
+const SideBar = (props: Props) => (
   <aside>
     <SidebarContainer>
       <Avatar />
@@ -15,7 +19,7 @@ const SideBar = () => (
       <Description typeParagraph="principal" fontSize={12}>
         Engenheiro Front-End
       </Description>
-      <BTNTema>Trocar tema</BTNTema>
+      <BTNTema onClick={props.trocaTema}>Trocar tema</BTNTema>
     </SidebarContainer>
   </aside>
 )
